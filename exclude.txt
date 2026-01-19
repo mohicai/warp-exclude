@@ -5,7 +5,7 @@ stun.cloudflare.com
 6.ipw.cn
 *.baidu.com
 *.mohic.lol
-*,mksha.net
+*.mksha.net
 stun.sipnet.com:3478
 stun.business-isp.nl:3478
 stun.sipnet.net:3478
