@@ -5,3 +5,4 @@ stun.cloudflare.com
 6.ipw.cn
 *.baidu.com
 *.mohic.lol
+*,mksha.net
