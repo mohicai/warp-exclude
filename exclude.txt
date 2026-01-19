@@ -4,3 +4,4 @@ stun.cloudflare.com
 240e::/16
 6.ipw.cn
 *.baidu.com
+*.mohic.lol
