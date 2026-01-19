@@ -1,0 +1,13 @@
+name: Sync WARP Split Tunnel
+on:
+  push:
+    paths:
+      - 'exclude.txt'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Worker
+        run: |
+          curl -X GET "https://你的worker名.你的子域名.workers.dev/?key=YOUR_SECRET_KEY"
