@@ -3,9 +3,9 @@ export default {
     const OWNER = "mohicai"; 
     const REPO = "warp-exclude"; 
     const PATH = "exclude.txt";
-
+    const CF_ACCOUNT_ID= "3645576ee7e7464ea5d5caee7645a2cc"
     // 环境变量前置检查
-    if (!env.CF_ACCOUNT_ID || !env.CF_API_TOKEN || !env.GITHUB_TOKEN) {
+    if (!CF_ACCOUNT_ID || !env.CF_API_TOKEN || !env.GITHUB_TOKEN) {
       return new Response(JSON.stringify({ error: "Environment variables missing" }), { status: 200 });
     }
 
