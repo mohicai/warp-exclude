@@ -9,6 +9,10 @@ stun.cloudflare.com
 120.224.0.0/11
 stun.mohic.lol  
 5.39.72.109:3478
+*.10086.cn
+*.cmpassport.com
+*.cmecloud.cn
+
 stun.sipnet.com:3478
 stun.business-isp.nl:3478
 stun.sipnet.net:3478

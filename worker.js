@@ -3,10 +3,11 @@ export default {
     const OWNER = "mohicai"; 
     const REPO = "warp-exclude"; 
     const PATH = "exclude.txt";
-    const CF_ACCOUNT_ID= "3645576ee7e7464ea5d5caee7645a2cc"
-    // 环境变量前置检查
-    if (!CF_ACCOUNT_ID || !env.CF_API_TOKEN || !env.GITHUB_TOKEN) {
-      return new Response(JSON.stringify({ error: "Environment variables missing" }), { status: 200 });
+    const CF_ACCOUNT_ID = "3645576ee7e7464ea5d5caee7645a2cc";
+
+    // 环境变量检查 (CF_ACCOUNT_ID 已经硬编码，所以只检查 Token)
+    if (!env.CF_API_TOKEN || !env.GITHUB_TOKEN) {
+      return new Response(JSON.stringify({ error: "Cloudflare or GitHub Token missing in Environment Variables" }), { status: 200 });
     }
 
     try {
@@ -23,25 +24,25 @@ export default {
       const text = await githubRes.text();
 
       const excludeList = text.split('\n')
-        .map(line => line.trim())
-        .filter(line => line && !line.startsWith('#'))
         .map(line => {
-          // --- 改进的解析逻辑 ---
+          // 1. 去掉行末尾的注释（即去掉 # 及其后面的所有内容）
+          // 2. 去掉首尾空格
+          return line.split('#')[0].trim();
+        })
+        // 3. 过滤掉空行（原本就是注释行或者全是空格的行，在上面处理后会变成空字符串）
+        .filter(line => line !== "")
+        .map(line => {
           let entry = line;
           
-          // 如果包含端口号 (针对域名或 IPv4:端口)
-          // 注意：IPv6 的端口通常在 [] 外面，如 [2409::]:3478
+          // --- 解析域名/IP及端口 ---
           if (line.includes(']:')) {
-             entry = line.split(']:')[0].replace('[', ''); // 提取 [IPv6]
+             entry = line.split(']:')[0].replace('[', ''); 
           } else if (!line.includes(':') || (line.match(/:/g) || []).length === 1) {
-             // 只有0个或1个冒号，认为是 域名:端口 或 IPv4:端口
              entry = line.split(':')[0];
           } 
-          // 如果是纯 IPv6 (多个冒号且没端口)，entry 保持原样
 
-          // 判断是否为 IP (包含 IPv4 或 IPv6 特征)
           const isIPv4 = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}($|\/)/.test(entry);
-          const isIPv6 = /:/.test(entry); // 简单的 IPv6 判断：包含冒号
+          const isIPv6 = /:/.test(entry); 
 
           if (isIPv4 || isIPv6) {
             return { 
@@ -70,7 +71,7 @@ export default {
         success: cfData.success,
         cloudflare_response: cfData,
         updated_count: excludeList.length,
-        preview: excludeList.slice(-3) // 显示最后三项确认格式
+        preview: excludeList.slice(-3) 
       }));
 
     } catch (err) {
