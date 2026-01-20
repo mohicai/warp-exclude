@@ -9,9 +9,34 @@ stun.cloudflare.com
 120.224.0.0/11
 stun.mohic.lol  
 5.39.72.109:3478
+
+# 中国移动云盘核心域名
+yun.139.com
+caiyun.feixin.10086.cn
+pfs.mcloud.139.com
+# 存储与下载节点
+dl.pfs.mcloud.139.com
+upload.pfs.mcloud.139.com
+# 登录与认证
+*.139.com
+# 移动通用域名
+10086.cn
+*.139.com
+
+
+#中国移动云盘
 *.10086.cn
 *.cmpassport.com
 *.cmecloud.cn
+# 移动 5G/宽带 常用汇聚段（涵盖大部分 CDN 节点）
+120.192.0.0/10
+117.136.0.0/13
+112.0.0.0/10
+183.192.0.0/10
+223.64.0.0/11
+# 移动 IPv6 段
+2409:8000::/20
+
 
 stun.sipnet.com:3478
 stun.business-isp.nl:3478
