@@ -1,10 +1,17 @@
-stun.cloudflare.com
-192.168.1.0/24
-192.168.0.0/16
+
 2409::/16
 240e::/16
 #::/0
-0.0.0.0/0
+#0.0.0.0/0
+
+#私有ip
+172.16.0.0/12
+10.0.0.0/8
+192.168.0.0/16
+#运营商级NAT段
+100.64.0.0/10
+fe80::/10
+
 6.ipw.cn
 *.baidu.com
 *.mohic.lol
@@ -316,13 +323,7 @@ stun.mohic.lol
 223.223.192.0/21
 223.223.200.0/22
 223.223.204.0/23
-##########################  END  ##########################
-
-######################### Warning #########################
-# ※ The data can be used for most applications but do not use data for mission-critical or in systems that require absolute accuracy. Use of data is entirely at your own risk.
-# ※ 数据可用于大多数应用程序，但请勿用于关键任务或需要绝对准确性的系统。使用数据的风险完全由您自行承担。
-###########################################################
-
+#########################
 
 # 中国移动云盘核心域名
 yun.139.com
@@ -352,6 +353,9 @@ upload.pfs.mcloud.139.com
 2409:8000::/20
 
 
+# stun 服务器地址
+
+stun.cloudflare.com
 stun.sipnet.com:3478
 stun.business-isp.nl:3478
 stun.sipnet.net:3478
