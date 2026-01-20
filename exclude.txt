@@ -361,6 +361,7 @@ upload.pfs.mcloud.139.com
 5.39.72.109:3478
 85.197.87.182:3478
 81.82.206.117:3478
+4.ipw.cn
 
 stun.cloudflare.com
 stun.sipnet.com:3478
