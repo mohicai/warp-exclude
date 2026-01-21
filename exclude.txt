@@ -12,7 +12,7 @@
 100.64.0.0/10
 fe80::/10
 
-#6.ipw.cn
+6.ipw.cn
 *.baidu.com
 *.mohic.lol
 *.mksha.net
