@@ -14,7 +14,8 @@ fe80::/10
 *.1panel.live
 *.1panel.dev
 *.1ms.run
-
+mhc.cn
+mksha.net
 
 6.ipw.cn
 *.baidu.com
