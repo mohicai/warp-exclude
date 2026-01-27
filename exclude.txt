@@ -31,6 +31,24 @@ stun.mohic.lol
 180.101.139.183 # 百度网段相关
 120.224.0.0/11   # 广东移动汇聚段（涵盖你 MTR 的前几跳）
 
+*.bilibili.com
+*.hdslb.com
+*.bilivideo.com
+*.biliapi.net
+*.biliapi.com
+*.bilicdn1.com
+*.biligame.com
+*.biliintl.com
+*.biliup.com
+*.biliapi.io
+*.biliapi.tv
+*.biliapi.cloud
+
+47.100.0.0/14
+8.134.50.0/24
+119.3.70.0/24
+139.159.241.0/24
+
 # --- 移动云盘加速 ---
 120.192.0.0/10
 
