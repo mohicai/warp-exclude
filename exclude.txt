@@ -16,8 +16,10 @@ fe80::/10
 *.1ms.run
 mhc.cn
 mksha.net
-*.aliyundrive.net
 
+# 阿里云盘
+*.aliyundrive.net
+8.139.176.61
 
 6.ipw.cn
 *.baidu.com
