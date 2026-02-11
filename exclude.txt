@@ -16,6 +16,8 @@ fe80::/10
 *.1ms.run
 mhc.cn
 mksha.net
+*.aliyundrive.net
+
 
 6.ipw.cn
 *.baidu.com
