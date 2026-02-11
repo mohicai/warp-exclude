@@ -43,6 +43,10 @@ stun.mohic.lol
 *.biliapi.io
 *.biliapi.tv
 *.biliapi.cloud
+# dns
+8.8.8.8
+223.5.5.5
+119.29.29.29
 
 47.100.0.0/14
 8.134.50.0/24
