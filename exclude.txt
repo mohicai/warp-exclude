@@ -18,8 +18,10 @@ mhc.cn
 mksha.net
 
 # 阿里云盘
-#*.aliyundrive.net
-#8.139.176.61
+*.aliyundrive.net
+*.aliyun.com
+8.139.176.61
+
 
 6.ipw.cn
 *.baidu.com
