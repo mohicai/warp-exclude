@@ -5,13 +5,13 @@ export default {
     const PATH = "exclude.txt";
     const URL_PATH = "exclude_url.txt";
     const CF_ACCOUNT_ID = "3645576ee7e7464ea5d5caee7645a2cc";
+    
 /*
     if (!env.CF_API_TOKEN || !env.GITHUB_TOKEN) {
       return new Response(JSON.stringify({ error: "Cloudflare or GitHub Token missing" }), { status: 200 });
     }
 */
-    const GitID = "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";
-    
+
     try {
       // -----------------------------
       // 读取 exclude.txt
@@ -19,7 +19,7 @@ export default {
       const githubApiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}?ref=main&t=${Date.now()}`;
       const githubRes = await fetch(githubApiUrl, {
         headers: {
-          "Authorization": `token ${GitID}`,
+          "Authorization": `token ${env.GITHUB_TOKEN}`,
           "Accept": "application/vnd.github.v3.raw",
           "User-Agent": "Cloudflare-Worker-Updater"
         }
@@ -40,7 +40,7 @@ export default {
       const urlListApi = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${URL_PATH}?ref=main&t=${Date.now()}`;
       const urlListRes = await fetch(urlListApi, {
         headers: {
-          "Authorization": `token ${GitID}`,
+          "Authorization": `token ${env.GITHUB_TOKEN}`,
           "Accept": "application/vnd.github.v3.raw",
           "User-Agent": "Cloudflare-Worker-Updater"
         }
