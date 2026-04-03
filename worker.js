@@ -5,10 +5,11 @@ export default {
     const PATH = "exclude.txt";
     const URL_PATH = "exclude_url.txt";
     const CF_ACCOUNT_ID = "3645576ee7e7464ea5d5caee7645a2cc";
-
+/*
     if (!env.CF_API_TOKEN || !env.GITHUB_TOKEN) {
       return new Response(JSON.stringify({ error: "Cloudflare or GitHub Token missing" }), { status: 200 });
     }
+*/
 
     try {
       // -----------------------------
