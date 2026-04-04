@@ -4,6 +4,7 @@
 #::/0
 #0.0.0.0/0
 dav.jianguoyun.com
+www.gstatic.com
 
 # 私有ip
 172.16.0.0/12
