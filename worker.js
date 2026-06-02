@@ -97,7 +97,7 @@ export default {
       // -----------------------------
       // 提交到 Cloudflare
       // -----------------------------
-      const cfApiUrl = `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/devices/policy/exclude`;
+      const cfApiUrl = `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/devices/policy/include`;
       const cfRes = await fetch(cfApiUrl, {
         method: 'PUT',
         headers: {
