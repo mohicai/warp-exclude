@@ -3,6 +3,9 @@
 ip.sb
 *.ip.sb
 
+cloudflare.com
+*.cloudflare.com
+
 *.telegram.org
 telegram.org
 *.t.me
