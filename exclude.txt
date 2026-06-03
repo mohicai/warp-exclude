@@ -1,5 +1,8 @@
 # warp-exclude
 
+ip.sb
+*.ip.sb
+
 *.telegram.org
 telegram.org
 *.t.me
