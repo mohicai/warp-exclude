@@ -1,5 +1,7 @@
 # warp-exclude
 
+ghcr.io
+*.ghcr.io
 ip.sb
 *.ip.sb
 
