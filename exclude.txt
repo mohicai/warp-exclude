@@ -4,6 +4,8 @@ ghcr.io
 *.ghcr.io
 ip.sb
 *.ip.sb
+docker.io
+*.docker.io
 
 cloudflare.com
 *.cloudflare.com
